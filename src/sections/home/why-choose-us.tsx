@@ -5,9 +5,9 @@ import whyChooseUs from "../../../assets/why-choose-us-sec.jpg";
 const WhyChooseUs = () => {
   return (
     <div className="bg-sky-100">
-      <div className="container flex justify-between py-4">
-        <div className="w-2/3">
-          <h3 className="text-2xl font-bold mb-4">
+      <div className="container flex  flex-col-reverse gap-4 md:flex-row mx-auto justify-between py-4">
+        <div className="w-full md:w-2/3">
+          <h3 className="text-2xl md:text-4xl font-bold mb-4">
             Why do you choose Murad Apparels
           </h3>
           <p>
@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
           width={300}
           height={200}
           alt="why-choose-murad-apparels"
-          className="w-1/3"
+          className="w-full md:w-1/3"
         />
       </div>
     </div>

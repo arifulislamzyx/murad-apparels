@@ -12,13 +12,13 @@ export default function MuradApparelsSection() {
             alt="Murad Apparels Factory"
             layout="fill"
             objectFit="cover"
-            className="rounded-2xl shadow-lg"
+            className="rounded-2xl shadow-lg w-full md:w-1/3"
           />
         </div>
 
         {/* Text Part */}
         <div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
             Clothing Manufacturer in Bangladesh
           </h2>
           <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-700 mb-6">

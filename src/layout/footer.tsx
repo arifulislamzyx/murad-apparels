@@ -117,8 +117,8 @@ const Footer = () => {
         {/* Social Icons */}
 
         {/* Bottom Line */}
-        <div className="text-center text-sm mt-6 text-gray-400 border-t border-gray-700 pt-6">
-          © Poshgarments – 2024. All Rights Reserved. Developed &amp; SEO by{" "}
+        <div className="text-center text-sm mt-6 text-gray-400 border-t border-gray-700 py-8">
+          © Mural Apparels – 2024. All Rights Reserved. Developed &amp; SEO by{" "}
           <span className="text-white font-semibold">Inovixi</span>
         </div>
       </div>

@@ -4,9 +4,11 @@ import about from "../../../assets/guerment-photo.jpeg";
 
 const About = () => {
   return (
-    <div className="container flex justify-between py-5">
-      <div className="w-2/3 p-4">
-        <h3 className="text-2xl font-bold mb-4">About Murad Apparels LTD.</h3>
+    <div className="container flex flex-col-reverse md:flex-row justify-between py-5">
+      <div className="w-full md:w-2/3 p-4">
+        <h3 className="text-2xl md:text-4xl font-bold mb-4">
+          About Murad Apparels LTD.
+        </h3>
 
         <p>
           Murad Apparels is a 100% export-oriented, comprehensive ready-made
@@ -35,7 +37,7 @@ const About = () => {
         width={300}
         height={200}
         alt="guerment-working-photo"
-        className="w-1/3"
+        className="w-full md:w-1/3"
       />
     </div>
   );
