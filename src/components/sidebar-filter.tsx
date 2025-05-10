@@ -17,7 +17,7 @@ const SidebarFilter = ({
 
   return (
     <div className="border p-4 min-w-[200px] h-48">
-      <h3 className="font-bold mb-2">Categories</h3>
+      <h3 className="font-bold mb-2 text-2xl">Categories</h3>
       {categories.map((cat) => (
         <label key={cat} className="block">
           <input

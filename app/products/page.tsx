@@ -37,7 +37,7 @@ const Page = () => {
   if (isLoading) return <ProductPageSkeleton />;
 
   return (
-    <div className="w-full px-4 md:px-8 py-6 mt-20">
+    <div className="w-full px-4 md:px-8 py-6 mt-28">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Sidebar */}
         <div className="w-full md:w-1/4">

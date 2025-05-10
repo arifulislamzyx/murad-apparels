@@ -1,5 +1,3 @@
-// app/components/Footer.tsx
-
 import {
   Facebook,
   Linkedin,
@@ -7,6 +5,7 @@ import {
   Youtube,
   MessageCircleHeart,
 } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -17,23 +16,39 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">ABOUT US</h4>
             <ul className="space-y-2">
-              <li>Company Profile</li>
-              <li>About Us</li>
-              <li>Vision, Mission &amp; Values</li>
+              <a
+                href="/company_profile_muradApparels.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li>Company Profile</li>
+              </a>
+              <Link href={"/about-us"}>
+                <li>About Us</li>
+              </Link>
+              <Link href={"/about-us"}>
+                <li>Vision, Mission &amp; Values</li>
+              </Link>
               <li>Board of Directors</li>
-              <li>Contact Us</li>
+              <Link href={"/about-us"}>
+                <li>Contact Us</li>
+              </Link>
             </ul>
           </div>
 
-          {/* PRODUCTS */}
           <div>
             <h4 className="text-white font-semibold mb-4">PRODUCTS</h4>
             <ul className="space-y-2">
-              <li>Women’s Wear</li>
-              <li>Men’s Wear</li>
-              <li>Kid’s Wear</li>
-              <li>Uniform</li>
-              <li>Nightwear</li>
+              <Link href={"/products"}>
+                <li>Women’s Wear</li>
+              </Link>
+              <Link href={"/products"}>
+                <li>Men’s Wear</li>
+              </Link>
+
+              <Link href={"/products"}>
+                <li>Kid’s Wear</li>
+              </Link>
             </ul>
           </div>
 
@@ -41,44 +56,60 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">SUSTAINABILITY</h4>
             <ul className="space-y-2">
-              <li>Sustainability</li>
-              <li>Certified Audits</li>
-              <li>Natural Fabric</li>
-              <li>Sustainable Accessories</li>
-              <li>Value Addition On Garments</li>
+              <Link href={"/sustainability"}>
+                <li>Sustainability</li>
+              </Link>
+
+              <Link href={"/sustainability"}>
+                <li>Certified Audits</li>
+              </Link>
+              <Link href={"/sustainability"}>
+                <li>Natural Fabric</li>
+              </Link>
+              <Link href={"/sustainability"}>
+                <li>Sustainable Accessories</li>
+              </Link>
+
+              <Link href={"/sustainability"}>
+                <li>Value Addition On Garments</li>
+              </Link>
             </ul>
           </div>
 
           {/* CONTACT INFO */}
           <div>
             <h4 className="text-white font-semibold mb-4">CONTACT INFO</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                Murad Apparels Limited
-                <br />
-                South Gouripur Ashulia 1341,
-                <br />
-                Bangladesh.
-              </li>
-              <li className="flex items-center space-x-2 mt-2">
-                <span>📧</span>
-                <a href="mailto:info@poshgarments.com" className="underline">
-                  info@muradapparelsltd.com
-                </a>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span>📞</span>
-                <a href="tel:+8801717564460" className="underline">
-                  +880 1873-358809
-                </a>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span>📍</span>
-                <a href="#" className="underline">
-                  Google Map Location
-                </a>
-              </li>
-            </ul>
+            <div>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  Murad Apparels Limited
+                  <br />
+                  South Gouripur Ashulia 1341,
+                  <br />
+                  Bangladesh.
+                </li>
+                <li className="flex items-center space-x-2 mt-2">
+                  <span>📧</span>
+                  <a href="mailto:info@poshgarments.com" className="underline">
+                    info@muradapparelsltd.com
+                  </a>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span>📞</span>
+                  <a href="tel:+8801717564460" className="underline">
+                    +880 1873-358809
+                  </a>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span>📍</span>
+                  <a href="#" className="underline">
+                    Google Map Location
+                  </a>
+                </li>
+              </ul>
+
+              <ul></ul>
+            </div>
             <div className="flex justify-center mt-10 space-x-6">
               <a href="#" aria-label="Facebook">
                 <Facebook
@@ -113,10 +144,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* Social Icons */}
-
-        {/* Bottom Line */}
         <div className="text-center text-sm mt-6 text-gray-400 border-t border-gray-700 py-8">
           © Mural Apparels – 2024. All Rights Reserved. Developed &amp; SEO by{" "}
           <span className="text-white font-semibold">Inovixi</span>

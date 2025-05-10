@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import logo from "../../assets/logo.jpeg";
 import logo1 from "../../assets/logo1.png";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -60,7 +59,7 @@ const Navbar = () => {
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b">
-          <Image src={logo} alt="murad-apparels-logo" width={80} height={30} />
+          <Image src={logo1} alt="murad-apparels-logo" width={80} height={30} />
           <button onClick={() => setIsOpen(false)} aria-label="Close Menu">
             <X size={24} />
           </button>

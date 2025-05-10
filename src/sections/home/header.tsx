@@ -27,9 +27,15 @@ const Header = () => {
 
         {/* Buttons */}
         <div className="flex flex-wrap justify-center gap-4">
-          <button className="flex items-center gap-2 bg-[#3236a8] hover:bg-[#2a2e8a] text-white py-3 px-6 rounded-lg text-lg font-medium">
-            <FileText className="w-5 h-5" /> Company Profile
-          </button>
+          <a
+            href={"/company_profile_muradApparels.pdf"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="flex items-center gap-2 bg-[#3236a8] hover:bg-[#2a2e8a] text-white py-3 px-6 rounded-lg text-lg font-medium">
+              <FileText className="w-5 h-5" /> Company Profile
+            </button>
+          </a>
 
           <Link href={"/products"}>
             <button className="flex items-center gap-2 bg-[#3236a8] hover:bg-[#2a2e8a] text-white py-3 px-6 rounded-lg text-lg font-medium">
@@ -37,9 +43,11 @@ const Header = () => {
             </button>
           </Link>
 
-          <button className="flex items-center gap-2 bg-[#019e53] hover:bg-[#017b40] text-white py-3 px-6 rounded-lg text-lg font-medium">
-            <Leaf className="w-5 h-5" /> Sustainability Report 2023
-          </button>
+          <Link href={"/sustainability"}>
+            <button className="flex items-center gap-2 bg-[#019e53] hover:bg-[#017b40] text-white py-3 px-6 rounded-lg text-lg font-medium">
+              <Leaf className="w-5 h-5" /> Sustainability Report 2023
+            </button>
+          </Link>
         </div>
       </div>
     </div>

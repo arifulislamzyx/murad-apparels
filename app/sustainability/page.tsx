@@ -1,3 +1,4 @@
+import SustainableAccessories from "@/sections/home/accessories";
 import CertifiedAudits from "@/sections/sustainability/cartified-audits";
 import Certificates from "@/sections/sustainability/certificates";
 import SdgGoals from "@/sections/sustainability/SdgGoals";
@@ -10,6 +11,7 @@ const Page = () => {
       <Sustainability />
       <CertifiedAudits />
       <SdgGoals />
+      <SustainableAccessories />
       <Certificates />
     </div>
   );
