@@ -17,7 +17,7 @@ const Page = () => {
 
   const [categoryFilter, setCategoryFilter] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 10;
+  const productsPerPage = 9;
 
   useEffect(() => {
     dispatch(fetchProductList());
@@ -53,7 +53,7 @@ const Page = () => {
             <p className="text-center">Loading...</p>
           ) : (
             <>
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
                 {currentProducts.map((product: IAProduct) => (
                   <ProductCard key={product.productCode} product={product} />
                 ))}
