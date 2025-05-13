@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const OurCutomers = () => {
   return (
-    <div className="container mx-auto border border-black p-4">
+    <div className="container mx-auto border border-black p-4 my-5">
       <h3 className="text-3xl md:text-4xl font-bold text-center pb-4 border-b-4 border-black w-60 mx-auto mb-4">
         Our Customers
       </h3>

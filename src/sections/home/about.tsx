@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import about from "../../../assets/guerment-photo.jpeg";
+import about4 from "../../../assets/about_sec_.jpg";
 
 const About = () => {
   return (
@@ -11,29 +11,25 @@ const About = () => {
         </h3>
 
         <p>
-          Murad Apparels is a 100% export-oriented, comprehensive ready-made
-          woven garment manufacturing unit, operating with 16 production lines
-          across a 57-acre facility, established in 2013. We deliver the best in
-          buying and production services, covering sourcing, procurement,
-          manufacturing, quality control, follow-up, creative services, image
-          production, and logistics. Murad Apparels offers a progressive
-          approach to managing your brand and boosting your company’s
-          productivity, while reducing costs with full security and
-          transparency. We bring a relentless focus on style, quality, timing,
-          communication, professionalism, and operational efficiency.
-          Exceptional quality is the foundation of our company and drives every
-          decision — from selecting premium materials to delivering outstanding
-          customer service. We specialize in outerwear and all kinds of bottoms,
-          including suede and PU leather products. Our manufacturing facilities
-          are proudly certified by GOTS, BSCI, SEDEX, WRAP, Oeko-Tex, OCS,
-          ACCORD, ISO 9001:2015 (QMS), and C-TPAT. Our lead time typically
-          ranges from 90 to 120 days, ensuring timely and reliable delivery to
-          our partners worldwide.
+          Murad Apparels is a leading garment manufacturer in Bangladesh,
+          dedicated to delivering premium-quality woven garments, outerwear, and
+          bottoms to global markets. Established in 1994, we are a 100%
+          export-oriented company with a fully integrated manufacturing facility
+          spread across 57 acres, featuring 16 advanced production lines. With a
+          strong emphasis on quality, efficiency, and ethical manufacturing, we
+          are proudly certified by globally recognized standards including GOTS,
+          BSCI, SEDEX, WRAP, Oeko-Tex, OCS, ACCORD, ISO 9001:2015, and C-TPAT.
+          Our product range includes high-performance garments crafted from
+          specialized materials such as PU leather and suede. From raw material
+          sourcing to final shipment, we provide end-to-end solutions that
+          minimize risk, enhance productivity, and support brand growth. At
+          Murad Apparels, we don’t just manufacture garments — we build
+          long-term partnerships founded on trust, innovation, and excellence.
         </p>
       </div>
 
       <Image
-        src={about}
+        src={about4}
         width={300}
         height={200}
         alt="guerment-working-photo"

@@ -2,6 +2,9 @@
 
 import { BadgeCheck, TimerReset, ShieldCheck } from "lucide-react";
 import Image from "next/image";
+import compliance from "../../../assets/complaince.webp";
+import community from "../../../assets/commitment.png";
+import efficiency from "../../../assets/efficiency.webp";
 
 export default function OurValues() {
   return (
@@ -14,12 +17,14 @@ export default function OurValues() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Commitment */}
           <div className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center">
-            <div className="relative w-16 h-16 mb-4">
+            <div className="relative mb-4">
               <Image
-                src="/images/commitment.jpg"
+                src={community}
                 alt="Commitment"
-                fill
-                className="rounded-full object-cover"
+                width={100}
+                height={100}
+                // fill
+                // className="rounded-full object-cover"
               />
             </div>
             <BadgeCheck className="text-blue-600 w-8 h-8 mb-2" />
@@ -32,12 +37,14 @@ export default function OurValues() {
 
           {/* Efficiency */}
           <div className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center">
-            <div className="relative w-16 h-16 mb-4">
+            <div className="relative  mb-4">
               <Image
-                src="/images/efficiency.jpg"
+                src={efficiency}
                 alt="Efficiency"
-                fill
-                className="rounded-full object-cover"
+                width={100}
+                height={100}
+                // fill
+                // className="rounded-full object-cover"
               />
             </div>
             <TimerReset className="text-green-600 w-8 h-8 mb-2" />
@@ -50,12 +57,13 @@ export default function OurValues() {
 
           {/* Compliance */}
           <div className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center">
-            <div className="relative w-16 h-16 mb-4">
+            <div className="relative  mb-4">
               <Image
-                src="/images/compliance.jpg"
+                src={compliance}
                 alt="Compliance"
-                fill
-                className="rounded-full object-cover"
+                width={100}
+                height={100}
+                // className="rounded-full object-cover"
               />
             </div>
             <ShieldCheck className="text-purple-600 w-8 h-8 mb-2" />

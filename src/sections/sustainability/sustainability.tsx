@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import sustainability from "../../../assets/sustainability.png";
 
 export default function Sustainability() {
   return (
@@ -14,7 +15,7 @@ export default function Sustainability() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="relative w-full h-64 md:h-80">
             <Image
-              src="/images/audit-checklist.jpg" // Replace with actual image
+              src={sustainability}
               alt="Audit Checklist"
               fill
               className="object-cover rounded-md"

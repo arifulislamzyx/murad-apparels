@@ -30,7 +30,7 @@ const Footer = () => {
                 <li>Vision, Mission &amp; Values</li>
               </Link>
               <li>Board of Directors</li>
-              <Link href={"/about-us"}>
+              <Link href={"/contact-us"}>
                 <li>Contact Us</li>
               </Link>
             </ul>

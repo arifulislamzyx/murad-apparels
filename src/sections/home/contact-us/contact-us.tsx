@@ -67,6 +67,7 @@ const ContactUs = () => {
                   <MapPinPlusInside className="text-blue-500" />
                   <h3 className="text-lg font-bold">Office Address</h3>
                 </div>
+                <p className="font-bold mt-4">Bangladesh Office</p>
                 <p>
                   Murad Apparels Limited South Gouripur Ashulia 1341,
                   Bangladesh.

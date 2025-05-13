@@ -1,5 +1,6 @@
 "use client";
 import { audits } from "@/data/audits";
+import Image from "next/image";
 
 export default function CertifiedAudits() {
   return (
@@ -16,6 +17,12 @@ export default function CertifiedAudits() {
               key={index}
               className="bg-white p-5 rounded-xl border shadow hover:shadow-md transition"
             >
+              <Image
+                src={audit?.image}
+                alt={audit.title}
+                width={100}
+                height={80}
+              />
               <h3 className="text-lg font-semibold mb-2">{audit.title}</h3>
               <p className="text-sm text-gray-700">{audit.description}</p>
             </div>

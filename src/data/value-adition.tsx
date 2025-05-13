@@ -1,3 +1,8 @@
+import placementPlace from "../../assets/placement-print.png";
+import embroidery from "../../assets/swing_machine.png";
+import washing from "../../assets/Washing-Piece Died.png";
+import handWork from "../../assets/hand-work.png";
+
 export const valueAdditionItems = [
   {
     title: "Placement Print",
@@ -16,7 +21,7 @@ export const valueAdditionItems = [
       "Discharge",
       "Discharge",
     ],
-    image: "/images/placement-print.png",
+    image: placementPlace,
   },
   {
     title: "Embroidery",
@@ -30,7 +35,7 @@ export const valueAdditionItems = [
       "Emb with print",
       "Felt",
     ],
-    image: "/images/embroidery.png",
+    image: embroidery,
   },
   {
     title: "Washing / Piece Died",
@@ -48,7 +53,7 @@ export const valueAdditionItems = [
       "Stone wash",
       "Heavy bleask wash",
     ],
-    image: "/images/washing.png",
+    image: washing,
   },
   {
     title: "Hand Works",
@@ -62,6 +67,6 @@ export const valueAdditionItems = [
       "Fabrics belt",
       "Embellishment",
     ],
-    image: "/images/handwork.png",
+    image: handWork,
   },
 ];

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import whyChooseUs from "../../../assets/why-choose-us-sec.jpg";
+import whyChooseUs from "../../../assets/why_choose_us.jpg";
 
 const WhyChooseUs = () => {
   return (
@@ -11,24 +11,24 @@ const WhyChooseUs = () => {
             Why do you choose Murad Apparels
           </h3>
           <p>
-            At Murad Apparels, we believe that exceptional quality, reliability,
-            and innovation are the cornerstones of successful partnerships. With
-            over a decade of manufacturing excellence, we bring unmatched
-            expertise in producing high-quality woven garments, outerwear, and
-            bottoms — including specialized products like suede and PU leather.
-            Our state-of-the-art, 57-acre facility with 16 production lines
-            ensures efficiency, scalability, and the highest standards of
-            quality control. Certified by leading global organizations such as
-            GOTS, BSCI, SEDEX, WRAP, Oeko-Tex, OCS, ACCORD, ISO 9001:2015, and
-            C-TPAT, we guarantee ethical, sustainable, and responsible
-            production practices. From sourcing to final shipment, we offer a
-            complete, secure solution designed to increase your brand’s
-            productivity while reducing operational costs. Our relentless focus
-            on style, craftsmanship, timing, and communication ensures you not
-            only get products — you get a partner committed to your success.
-            When you choose Murad Apparels, you choose trust, innovation, and a
-            seamless experience backed by a team that is passionate about
-            delivering excellence every step of the way.
+            At Murad Apparels, exceptional quality, reliability, and innovation
+            are the cornerstones of every successful partnership. With decades
+            of manufacturing excellence, we offer unmatched expertise in
+            producing premium woven garments, outerwear, and bottoms — including
+            specialized items crafted from suede and PU leather. Our advanced,
+            57-acre manufacturing facility houses 16 production lines, ensuring
+            efficiency, scalability, and top-tier quality control. We are
+            certified by globally recognized bodies including GOTS, BSCI, SEDEX,
+            WRAP, Oeko-Tex, OCS, ACCORD, ISO 9001:2015, and C-TPAT —
+            guaranteeing ethical, sustainable, and responsible production
+            practices. From raw material sourcing to final shipment, we provide
+            a complete, secure solution tailored to enhance your brand’s
+            productivity while reducing operational risks. Our focus on
+            innovation, craftsmanship, and seamless communication ensures you’re
+            not just getting a product — you’re gaining a partner committed to
+            your success. When you choose Murad Apparels, you choose trust,
+            innovation, and a dedicated team passionate about delivering
+            excellence at every step.
           </p>
         </div>
 

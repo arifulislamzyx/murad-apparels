@@ -22,7 +22,7 @@ const Header = () => {
           Apparel Manufacturer in Bangladesh
         </h1>
         <p className="text-white text-xl md:text-2xl font-semibold mb-8">
-          X Years of Manufacturing Experience
+          30+ Years of Manufacturing Experience
         </p>
 
         {/* Buttons */}
