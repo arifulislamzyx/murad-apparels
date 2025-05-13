@@ -85,7 +85,10 @@ const Footer = () => {
                 </li>
                 <li className="flex items-center space-x-2 mt-2">
                   <span>📧</span>
-                  <a href="mailto:info@poshgarments.com" className="underline">
+                  <a
+                    href="mailto:info@muradapparelsltd.com"
+                    className="underline"
+                  >
                     info@muradapparelsltd.com
                   </a>
                 </li>
