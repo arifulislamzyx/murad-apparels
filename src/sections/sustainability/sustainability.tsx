@@ -22,13 +22,13 @@ export default function Sustainability() {
             />
           </div>
           <p className="text-gray-700 text-justify">
-            Posh Garments, an IS 9001-2015 certified enterprise endorsed by
+            Murad Apparels, an IS 9001-2015 certified enterprise endorsed by
             BSCI, SEDEX, GOTS, and ACCORD, prioritizes a secure workplace for
             our team. Operating on robust ERP, we actively minimize material
             wastage and enhance production efficiency. Our commitment extends to
             product safety, chemical-free discharge, and comprehensive recycling
             of raw materials like fabric, paper, plastic, metal, and more.
-            Elevate your wardrobe with sustainable elegance at Posh Garments.
+            Elevate your wardrobe with sustainable elegance at Murad Apparels.
           </p>
         </div>
       </div>

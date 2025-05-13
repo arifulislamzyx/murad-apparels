@@ -21,7 +21,7 @@ const CategoryProductsPage = () => {
   console.log("Categories", products);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 pt-20">
       {products.map((product) => (
         <div key={product._id} className="border p-4 rounded shadow">
           <Image

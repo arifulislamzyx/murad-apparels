@@ -1,6 +1,6 @@
 const ProductPageSkeleton = () => {
   return (
-    <div className="flex gap-6 p-6 animate-pulse">
+    <div className="flex gap-6 p-6 animate-pulse mt-5">
       {/* Sidebar Skeleton */}
       <div className="w-64 space-y-4">
         <div className="h-6 w-3/4 bg-gray-300 rounded" />

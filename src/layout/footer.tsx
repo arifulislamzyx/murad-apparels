@@ -12,7 +12,6 @@ const Footer = () => {
     <footer className="bg-[#121c2d]">
       <div>
         <div className="conatiner text-gray-300 py-10 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-          {/* ABOUT US */}
           <div>
             <h4 className="text-white font-semibold mb-4">ABOUT US</h4>
             <ul className="space-y-2">
@@ -51,8 +50,6 @@ const Footer = () => {
               </Link>
             </ul>
           </div>
-
-          {/* SUSTAINABILITY */}
           <div>
             <h4 className="text-white font-semibold mb-4">SUSTAINABILITY</h4>
             <ul className="space-y-2">
@@ -75,8 +72,6 @@ const Footer = () => {
               </Link>
             </ul>
           </div>
-
-          {/* CONTACT INFO */}
           <div>
             <h4 className="text-white font-semibold mb-4">CONTACT INFO</h4>
             <div>

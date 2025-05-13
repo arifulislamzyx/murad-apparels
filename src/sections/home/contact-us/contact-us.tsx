@@ -10,7 +10,7 @@ const ContactUs = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const form = e.target as HTMLFormElement; // Explicitly typing e.target as HTMLFormElement
+    const form = e.target as HTMLFormElement;
     const name = (form.elements.namedItem("name") as HTMLInputElement).value;
     const message = (form.elements.namedItem("message") as HTMLTextAreaElement)
       .value;
@@ -41,7 +41,7 @@ const ContactUs = () => {
 
       if (res.status === 200) {
         setSuccessMessage("Thank you for Contact Us");
-        form.reset(); // Reset the form after successful submission
+        form.reset();
       } else {
         setSuccessMessage("Something went wrong. Please try again.");
       }
@@ -59,7 +59,6 @@ const ContactUs = () => {
         <h2 className="text-center text-3xl font-bold mb-8">Contact US</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6  rounded-lg">
-          {/* Left Side - Office Information */}
           <div className="bg-gray-200 p-6 rounded-lg shadow-md">
             <div className="space-y-4">
               <div>

@@ -1,4 +1,3 @@
-// components/SidebarFilter.tsx
 const categories = ["Men's Wear", "Ladies Wear", "Kids Wear"];
 
 const SidebarFilter = ({

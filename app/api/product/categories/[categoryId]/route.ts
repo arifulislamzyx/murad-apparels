@@ -14,6 +14,8 @@ export async function GET(
 
     const products = await Product.find({ categoryId: params.categoryId });
 
+    console.log("categories in api", products);
+
     return NextResponse.json(products);
   } catch (error) {
     console.error("Error fetching category products:", error);
