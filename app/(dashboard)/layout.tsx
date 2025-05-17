@@ -33,7 +33,7 @@ const Layout: React.FC<layoutProps> = ({ children }) => {
         >
           <Sidebar />
         </div>
-        <main className="flex-grow p-4">{children}</main>
+        <main className="flex-grow p-4 mt-20">{children}</main>
       </div>
 
       {openDashboardMenu && (

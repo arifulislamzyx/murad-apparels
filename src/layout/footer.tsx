@@ -89,13 +89,13 @@ const Footer = () => {
                     href="mailto:info@muradapparelsltd.com"
                     className="underline"
                   >
-                    info@muradapparelsltd.com
+                    abdullahhannan@woventex.co
                   </a>
                 </li>
                 <li className="flex items-center space-x-2">
                   <span>📞</span>
                   <a href="tel:+8801717564460" className="underline">
-                    +880 1873-358809
+                    +44 7933 291037
                   </a>
                 </li>
                 <li className="flex items-center space-x-2">

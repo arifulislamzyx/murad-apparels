@@ -1,55 +1,32 @@
 "use client";
-import axios from "axios";
 import { Mail, MapPinPlusInside, PhoneOutgoing } from "lucide-react";
 import React, { useState } from "react";
 
 const ContactUs = () => {
-  const [loading, setLoading] = useState(false);
   const [seccessMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
 
-    const form = e.target as HTMLFormElement;
-    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
-    const message = (form.elements.namedItem("message") as HTMLTextAreaElement)
-      .value;
-    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
-    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
-
-    const feedBack = {
-      name,
-      email,
-      message,
-      phone,
-    };
-    console.log(feedBack);
-
-    setLoading(true);
     try {
-      const res = await axios.post(
-        "https://backend.skbjobmarket.com/api/feedback",
-        feedBack,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await fetch("https://formspree.io/f/xldbzgak", {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
-      console.log(loading);
-
-      if (res.status === 200) {
-        setSuccessMessage("Thank you for Contact Us");
+      if (response.ok) {
+        setSuccessMessage("Thank you for contacting us!");
         form.reset();
       } else {
         setSuccessMessage("Something went wrong. Please try again.");
       }
     } catch (error) {
-      console.error("Error submitting feedback:", error);
-      setSuccessMessage("Error submitting Contact Form. Please try again.");
-    } finally {
-      setLoading(false);
+      console.error("Form submission error:", error);
+      setSuccessMessage("Network error. Please try again later.");
     }
   };
 
@@ -58,7 +35,7 @@ const ContactUs = () => {
       <div className="container mx-auto my-10">
         <h2 className="text-center text-3xl font-bold mb-8">Contact US</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6  rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 rounded-lg">
           <div className="bg-gray-200 p-6 rounded-lg shadow-md">
             <div className="space-y-4">
               <div>
@@ -76,17 +53,17 @@ const ContactUs = () => {
               <div>
                 <div className="flex items-center space-x-2">
                   <Mail className="text-blue-500" />
-
                   <h3 className="text-lg font-bold">General Enquiries</h3>
                 </div>
-                <p>info@muradapparelsltd.com</p>
+                <p>abdullahhannan@woventex.co</p>
               </div>
+
               <div>
                 <div className="flex items-center space-x-2">
                   <PhoneOutgoing className="text-blue-500" />
                   <h3 className="text-lg font-bold">Call Us</h3>
                 </div>
-                <p>Call us: +880 1873-358809</p>
+                <p>Call us: +44 7933 291037</p>
               </div>
             </div>
           </div>

@@ -5,8 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/Redux/Store/Store";
 import { createProduct } from "@/Redux/Slice/product-slice";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const AddProductForm = () => {
+  const router = useRouter();
+
   const dispatch = useDispatch<AppDispatch>();
   const { isLoading, isError, error } = useSelector(
     (state: RootState) => state.products
@@ -65,37 +68,50 @@ const AddProductForm = () => {
     dispatch(createProduct({ ...product, productImage: imageUrl }));
   };
 
+  const handleLogout = async () => {
+    // Optional: call backend to destroy session/cookie
+    await fetch("/api/logOut", {
+      method: "POST",
+    });
+
+    // Redirect to login page
+    router.push("/login");
+  };
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      {Object.keys(product).map(
-        (key) =>
-          key !== "productImage" && (
-            <div key={key}>
-              <input
-                name={key}
-                placeholder={key}
-                onChange={handleChange}
-                className="block w-full border px-2 py-1"
-              />
-            </div>
-          )
-      )}
-      <input
-        type="file"
-        onChange={handleImageChange}
-        className="block w-full"
-      />
+    <section>
+      <button onClick={handleLogout}>Log Out</button>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        {Object.keys(product).map(
+          (key) =>
+            key !== "productImage" && (
+              <div key={key}>
+                <input
+                  name={key}
+                  placeholder={key}
+                  onChange={handleChange}
+                  className="block w-full border px-2 py-1"
+                />
+              </div>
+            )
+        )}
+        <input
+          type="file"
+          onChange={handleImageChange}
+          className="block w-full"
+        />
 
-      <button
-        type="submit"
-        disabled={isLoading}
-        className="bg-blue-500 text-white px-4 py-2"
-      >
-        {isLoading ? "Adding..." : "Add Product"}
-      </button>
+        <button
+          type="submit"
+          disabled={isLoading}
+          className="bg-blue-500 text-white px-4 py-2"
+        >
+          {isLoading ? "Adding..." : "Add Product"}
+        </button>
 
-      {isError && <p className="text-red-500">{error}</p>}
-    </form>
+        {isError && <p className="text-red-500">{error}</p>}
+      </form>
+    </section>
   );
 };
 

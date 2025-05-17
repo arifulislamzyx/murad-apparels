@@ -26,7 +26,7 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <div className="bg-slate-200 text-black w-[300px] h-screen rounded-t-lg mx-auto py-6 px-4">
+    <div className="bg-slate-200 text-black w-[300px] h-screen rounded-t-lg mx-auto py-6 px-4 mt-20">
       <div className="ml-10">
         <h2 className="text-2xl mb-4">
           <Link href={"/dashboard"}>Home</Link>
