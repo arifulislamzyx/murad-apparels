@@ -1,0 +1,32 @@
+name: Murad Apparels
+
+on:
+  push:
+    branches:
+      - main # or 'master' or whichever branch you deploy from
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the app
+        run: npm run build
+
+      - name: Export static files (optional for static sites)
+        run: npm run export
+
+      # Deployment step (we’ll configure this later)
+      - name: Deploy to server
+        run: echo "Deployment step goes here"
