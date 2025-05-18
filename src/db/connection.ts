@@ -3,7 +3,9 @@ import mongoose from "mongoose";
 const { username, password } = process.env;
 
 if (!username || !password) {
-  throw new Error("Please define the DATABASE credentials environment variable inside .env.local");
+  throw new Error(
+    "Please define the DATABASE credentials environment variable inside .env.local"
+  );
 }
 
 const dbURI = `mongodb+srv://${username}:${password}@muradapparels.md68ind.mongodb.net/murad-apparels?retryWrites=true&w=majority&appName=muradApparels`;
@@ -11,7 +13,11 @@ const dbURI = `mongodb+srv://${username}:${password}@muradapparels.md68ind.mongo
 async function connectDB() {
   // Always create a new connection on each request
   try {
-    await mongoose.connect(dbURI);
+    if (mongoose.connection.readyState >= 1) return;
+
+    await mongoose.connect(dbURI, {
+      bufferCommands: false, // Optional
+    });
     console.log("Connected to MongoDB");
   } catch (error) {
     console.error("MongoDB connection error:", error);
