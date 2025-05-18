@@ -37,20 +37,9 @@ export const GET = async () => {
     const items = await Product.find();
 
     return NextResponse.json(items);
-  } catch (error: unknown) {
-    console.error("MongoDB Error:", error);
-
-    let errorMessage = "Unknown error";
-
-    if (error instanceof Error) {
-      errorMessage = error.message;
-      console.error("MongoDB Error:", error);
-    } else {
-      console.error("MongoDB Error (non-standard):", error);
-    }
-
+  } catch (error) {
     return NextResponse.json(
-      { message: "Error while getting items", errorMessage },
+      { message: "Error while getting items" },
       { status: 500 }
     );
   }
