@@ -37,6 +37,7 @@ export const GET = async () => {
     const items = await Product.find();
 
     return NextResponse.json(items);
+    //  @ts-ignore
   } catch (error: any) {
     console.error("MongoDB Error:", error);
     return NextResponse.json(
