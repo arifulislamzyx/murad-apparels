@@ -24,6 +24,7 @@
 //   }
 // };
 
+import connectDB from "@/db/connection";
 import connectionDb from "@/libs/db.connection";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
@@ -31,10 +32,7 @@ import { Product } from "../../../server/modals/product";
 
 export const GET = async () => {
   try {
-    if (mongoose.connection.readyState === 0) {
-      await mongoose.connect(connectionDb);
-      console.log("MongoDB connected");
-    }
+    await connectDB();
 
     const items = await Product.find();
 
