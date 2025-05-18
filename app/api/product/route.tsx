@@ -24,8 +24,8 @@
 //   }
 // };
 
-import mongoose from "mongoose";
 import connectionDb from "@/libs/db.connection";
+import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 import { Product } from "../../../server/modals/product";
 
@@ -41,10 +41,7 @@ export const GET = async () => {
     return NextResponse.json(items);
   } catch (error) {
     console.error("MongoDB Error:", error);
-    return NextResponse.json(
-      { message: "Error while getting items" },
-      { status: 500 }
-    );
+    return NextResponse.json({ message: "Error while getting items", error }, { status: 500 });
   }
 };
 
@@ -61,9 +58,6 @@ export async function POST(req: Request) {
       product: newProduct,
     });
   } catch (error) {
-    return NextResponse.json(
-      { message: "Error creating product", error },
-      { status: 500 }
-    );
+    return NextResponse.json({ message: "Error creating product", error }, { status: 500 });
   }
 }
