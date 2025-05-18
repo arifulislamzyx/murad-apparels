@@ -18,10 +18,6 @@ const initialState: ProductSlice = {
 
 export const fetchProductList = createAsyncThunk("product/fetchProductList", async () => {
   try {
-    const res = await fetch("/api/product");
-    const resJson = await res.json();
-    console.log({ resJson });
-
     const response = await axios.get<IAProduct[]>("/api/product");
     console.log("Product", response);
 
