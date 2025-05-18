@@ -55,6 +55,23 @@ const ContactUs = () => {
                   <Mail className="text-blue-500" />
                   <h3 className="text-lg font-bold">General Enquiries</h3>
                 </div>
+                <p>info@muradapparelsltd.com</p>
+              </div>
+
+              <div>
+                <div className="flex items-center space-x-2">
+                  <PhoneOutgoing className="text-blue-500" />
+                  <h3 className="text-lg font-bold">Call Us</h3>
+                </div>
+                <p>Call us: +880 1873358809</p>
+              </div>
+
+              <p className="font-bold mt-4">UK Office</p>
+              <div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="text-blue-500" />
+                  <h3 className="text-lg font-bold">General Enquiries</h3>
+                </div>
                 <p>abdullahhannan@woventex.co</p>
               </div>
 
