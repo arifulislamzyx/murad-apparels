@@ -37,10 +37,10 @@ export const GET = async () => {
     const items = await Product.find();
 
     return NextResponse.json(items);
-  } catch (error) {
+  } catch (error: any) {
     console.error("MongoDB Error:", error);
     return NextResponse.json(
-      { message: "Error while getting items", db: connectionDb },
+      { message: "Error while getting items", errorMessage: error.message },
       { status: 500 }
     );
   }
@@ -59,6 +59,9 @@ export async function POST(req: Request) {
       product: newProduct,
     });
   } catch (error) {
-    return NextResponse.json({ message: "Error creating product", error }, { status: 500 });
+    return NextResponse.json(
+      { message: "Error creating product", error },
+      { status: 500 }
+    );
   }
 }
