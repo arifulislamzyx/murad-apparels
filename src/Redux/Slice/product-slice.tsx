@@ -16,33 +16,31 @@ const initialState: ProductSlice = {
   error: null,
 };
 
-export const fetchProductList = createAsyncThunk(
-  "product/fetchProductList",
-  async () => {
-    try {
-      const response = await axios.get<IAProduct[]>("/api/product");
-      console.log("Product", response);
+export const fetchProductList = createAsyncThunk("product/fetchProductList", async () => {
+  try {
+    const res = await fetch("/api/product");
+    const resJson = await res.json();
+    console.log({ resJson });
 
-      return response.data;
-    } catch (error) {
-      console.error("Product list fetch failed for ==>", error);
-      throw new Error("Failed to fetch product list");
-    }
-  }
-);
+    const response = await axios.get<IAProduct[]>("/api/product");
+    console.log("Product", response);
 
-export const fetchProductById = createAsyncThunk(
-  "product/fetchProductById",
-  async (id: string) => {
-    try {
-      const response = await axios.get<IAProduct>(`/api/product/${id}`);
-      return response.data;
-    } catch (error) {
-      console.error("Product fetch by ID failed:", error);
-      throw new Error("Failed to fetch hotel details");
-    }
+    return response.data;
+  } catch (error) {
+    console.error("Product list fetch failed for ==>", error);
+    throw new Error("Failed to fetch product list");
   }
-);
+});
+
+export const fetchProductById = createAsyncThunk("product/fetchProductById", async (id: string) => {
+  try {
+    const response = await axios.get<IAProduct>(`/api/product/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Product fetch by ID failed:", error);
+    throw new Error("Failed to fetch hotel details");
+  }
+});
 
 export const createProduct = createAsyncThunk(
   "product/createProduct",
@@ -75,18 +73,15 @@ export const updateProduct = createAsyncThunk(
   }
 );
 
-export const deleteProduct = createAsyncThunk(
-  "product/deleteProduct",
-  async (id: string) => {
-    try {
-      await axios.delete(`/api/product/${id}`);
-      return id;
-    } catch (error) {
-      console.error("Product deletion failed:", error);
-      throw new Error("Failed to delete product");
-    }
+export const deleteProduct = createAsyncThunk("product/deleteProduct", async (id: string) => {
+  try {
+    await axios.delete(`/api/product/${id}`);
+    return id;
+  } catch (error) {
+    console.error("Product deletion failed:", error);
+    throw new Error("Failed to delete product");
   }
-);
+});
 
 const productSlice = createSlice({
   name: "product",
@@ -134,8 +129,7 @@ const productSlice = createSlice({
       .addCase(fetchProductById.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
-        state.error =
-          action.error.message || "Failed to fetch products details";
+        state.error = action.error.message || "Failed to fetch products details";
       })
       .addCase(createProduct.pending, (state) => {
         state.isLoading = true;
@@ -162,9 +156,7 @@ const productSlice = createSlice({
         state.isLoading = false;
         state.isError = false;
         state.error = null;
-        const index = state.products.findIndex(
-          (product) => product._id === action.payload._id
-        );
+        const index = state.products.findIndex((product) => product._id === action.payload._id);
         if (index !== -1) {
           state.products[index] = action.payload;
         }
@@ -183,9 +175,7 @@ const productSlice = createSlice({
         state.isLoading = false;
         state.isError = false;
         state.error = null;
-        state.products = state.products.filter(
-          (product) => product._id !== action.payload
-        );
+        state.products = state.products.filter((product) => product._id !== action.payload);
       })
       .addCase(deleteProduct.rejected, (state, action) => {
         state.isLoading = false;
