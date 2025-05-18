@@ -41,7 +41,7 @@ export const GET = async () => {
     console.error("MongoDB Error:", error);
 
     return NextResponse.json(
-      { message: "Error while getting items", errorMessage },
+      { message: "Error while getting items" },
       { status: 500 }
     );
   }
